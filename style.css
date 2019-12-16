@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas&display=swap');
+
+body {
+  font-family: 'Mountains of Christmas', cursive;
+  color: red;
+}
+
+#wrapper {
+  width: 90vw;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2em;
+}
+
+h1 {
+  grid-column: 2/3;
+  text-align: right;
+  text-shadow: 0px 0px 1em red;
+  transition-duration: 0.4s;
+  font-size: 3em;
+  -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+h1:hover {
+  transition-duration: 0.4s;
+}
+
+p:hover {
+  transition-duration: 0.4s;
+  -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+p {
+  transition-duration: 0.4s;
+  text-align: left;
+  text-shadow: 0px 0px 1em red;
+  font-size: 2em;
+  -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+img {
+  width: 100%;
+  box-shadow: 0px 0px 2em red;
+  border-radius: 1em;
+  transition-duration: 0.4s;
+}
+
+img:hover {
+  box-shadow: 0px 0px 5em red;
+  transition-duration: 0.4s;
+  transform: rotate3d(100, 100, 1, 15deg);
+}
+
+@-webkit-keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+.lang {
+  grid-row: span 2;
+  height: 100%;
+}
+
+@media screen and (max-width: 60em) {
+  #wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  h1 {
+    grid-column: unset;
+  }
+}
